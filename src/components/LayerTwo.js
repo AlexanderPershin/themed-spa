@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
+// import boPlay from '../img/bo-play.png';
+import cubes from '../img/cubes.png';
 
 const AnimatedDiv = styled(animated.div)`
   min-height: 3500px;
   padding: 200px;
-  background-size: 400% 100%;
-  background: linear-gradient(
-    90deg,
-    ${({ theme }) => theme.colors.primary},
-    ${({ theme }) => theme.colors.secondary}
-  );
+  background-repeat: repeat;
+  background: url(${cubes}),
+    linear-gradient(
+      90deg,
+      ${({ theme }) => theme.colors.primary},
+      ${({ theme }) => theme.colors.secondary}
+    );
 `;
 
 const LayerTwo = () => {
@@ -23,8 +26,7 @@ const LayerTwo = () => {
   }, [toggle]);
 
   const animProps = useSpring({
-    opacity: toggle ? 0.3 : 0.35,
-    backgroundPositionX: toggle ? '0%' : '350%',
+    opacity: toggle ? 0.5 : 0.6,
     config: { mass: 5, tension: 250, friction: 15 }
   });
 
