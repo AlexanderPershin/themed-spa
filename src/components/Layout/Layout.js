@@ -5,7 +5,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import defaultTheme from '../../themes/defaultTheme';
 
 const Container = styled.div`
-  /* min-height: 100%; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(75px, auto);
@@ -23,11 +22,11 @@ const FooterStyled = styled(Footer)`
   grid-column: 1 / -1;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, parallRef }) => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container>
-        <Header />
+        <Header parallRef={parallRef} />
         <Content>{children}</Content>
         <FooterStyled />
       </Container>

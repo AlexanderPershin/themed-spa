@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import styled, { createGlobalStyle } from 'styled-components';
 import Layout from './components/Layout/Layout';
-import LayerOne from './components/LayerOne';
-import LayerTwo from './components/LayerTwo';
-import LayerThree from './components/LayerThree';
+import LayerOne from './components/Layers/LayerOne';
+import LayerTwo from './components/Layers/LayerTwo';
+import LayerThree from './components/Layers/LayerThree';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -44,24 +44,25 @@ const ContentThird = styled(StyledContent)`
 
 function App() {
   const parallRef = useRef(null);
+  console.log('App -> parallRef', parallRef);
 
   return (
     <Parallax pages={8} scrolling={true} horizontal={false} ref={parallRef}>
       <GlobalStyle />
-      <StyledLayer offset={0.25} speed={1.5} factor={5}>
+      <StyledLayer offset={0.25} speed={2} factor={5}>
         <ContentFirst>
           <LayerOne />
         </ContentFirst>
       </StyledLayer>
-      <StyledLayer offset={0} speed={2} factor={5}>
+      <StyledLayer offset={0} speed={1.5} factor={5}>
         <ContentSecond>
           <LayerTwo />
         </ContentSecond>
       </StyledLayer>
       <StyledLayer offset={0} speed={1} factor={8}>
         <ContentThird>
-          <Layout>
-            <LayerThree />
+          <Layout parallRef={parallRef}>
+            <LayerThree parallRef={parallRef} />
           </Layout>
         </ContentThird>
       </StyledLayer>

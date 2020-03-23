@@ -44,7 +44,7 @@ const ThemeBtn = styled.label`
   }
 `;
 
-const Header = () => {
+const Header = ({ parallRef }) => {
   const themeContext = useContext(ThemeContext);
 
   const [themeStyle, setTheme] = useState('light');
@@ -52,6 +52,12 @@ const Header = () => {
   const handleTheme = () => {
     themeStyle === 'light' ? setTheme('dark') : setTheme('light');
     return;
+  };
+
+  const scrollIt = (to, duration = 1) => {
+    if (parallRef) {
+      parallRef.current.scrollTo(to);
+    }
   };
 
   return (
@@ -91,10 +97,18 @@ const Header = () => {
         />
       </ThemeBtn>
       <HeaderMenu>
-        <HeaderLink href='#welcome'>Welcome</HeaderLink>
-        <HeaderLink href='#products'>Products</HeaderLink>
-        <HeaderLink href='#team'>Our team</HeaderLink>
-        <HeaderLink href='#contact'>Get in touch</HeaderLink>
+        <HeaderLink href='#welcome' onClick={() => scrollIt(0)}>
+          Welcome
+        </HeaderLink>
+        <HeaderLink href='#products' onClick={() => scrollIt(1)}>
+          Products
+        </HeaderLink>
+        <HeaderLink href='#team' onClick={() => scrollIt(2)}>
+          Our team
+        </HeaderLink>
+        <HeaderLink href='#contact' onClick={() => scrollIt(3)}>
+          Get in touch
+        </HeaderLink>
       </HeaderMenu>
     </HeaderStyled>
   );
