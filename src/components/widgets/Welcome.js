@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledWelcome = styled.div`
   grid-column: 2 / 9;
-  grid-row: 1 / 7;
+  grid-row: 2 / 8;
   border: 20px solid ${({ theme }) => theme.colors.primary};
   border-bottom-right-radius: 150px;
   display: flex;

@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   min-height: 700px;
   &:not(:last-child) {
     /* Gap between divs */
-    margin-bottom: 150px;
+    margin-bottom: 250px;
   }
 `;
 

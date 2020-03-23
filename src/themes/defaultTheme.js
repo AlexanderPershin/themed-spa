@@ -15,5 +15,7 @@ export default {
     md: `22px`,
     lg: `30px`,
     xl: `45px`
-  }
+  },
+  shadows: ['0 0 10px rgba(0,0,0,0.5)', '0 3px 10px rgba(0,0,0,0.6)'],
+  borderRadius: '7px'
 };
