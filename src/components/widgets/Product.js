@@ -69,7 +69,7 @@ const Product = ({ children }) => {
           transform: y.interpolate(v => `rotate(${v * 100}deg)`),
           border: y.interpolate(
             v =>
-              `${v * 1.5 + 5}px ${v > 8 ? 'solid' : 'dotted'} ${
+              `${v * 1.2 + 5}px ${v > 8 ? 'solid' : 'dotted'} ${
                 themeContext.colors.accent
               }`
           )

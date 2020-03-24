@@ -30,6 +30,9 @@ const ThirdDiv = styled(StyledDiv)`
 const FourthDiv = styled(StyledDiv)`
   background-image: url(${officeThree});
 `;
+const FifthDiv = styled(StyledDiv)`
+  background-image: url(${officeTwo});
+`;
 
 const LayerOne = () => {
   return (
@@ -46,6 +49,7 @@ const LayerOne = () => {
           <source src={vid3} type='video/mp4' />
         </video>
       </FourthDiv>
+      <FifthDiv />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import cubes from '../../img/cubes.png';
 
 const AnimatedDiv = styled(animated.div)`
-  min-height: 3500px;
+  min-height: 7500px;
   padding: 200px;
   background-repeat: repeat;
   background: url(${cubes}),

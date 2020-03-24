@@ -24,11 +24,11 @@ const ArrowTail = styled.div`
   grid-row: ${({ arrowRowStart }) => arrowRowStart} /
     ${({ arrowRowStart }) => arrowRowStart + 1};
   display: inline-block;
-  height: 21px;
+  height: 22px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
   clip-path: polygon(40% 0%, 60% 0%, 60% 100%, 40% 100%);
-  transform: translateY(-10px);
+  transform: translateY(-11px);
   z-index: 1000;
 `;
 

@@ -39,31 +39,34 @@ const ContentSecond = styled(StyledContent)`
 `;
 
 const ContentThird = styled(StyledContent)`
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 function App() {
   const parallRef = useRef(null);
 
   return (
-    <Parallax pages={8} scrolling={true} horizontal={false} ref={parallRef}>
+    <Parallax pages={4.2} scrolling={true} horizontal={false} ref={parallRef}>
       <GlobalStyle />
-      <StyledLayer offset={0.25} speed={2} factor={5}>
+      <StyledLayer offset={0.25} speed={2} factor={0.5}>
         <ContentFirst>
           <LayerOne />
         </ContentFirst>
       </StyledLayer>
-      <StyledLayer offset={0} speed={1.5} factor={5}>
+      <StyledLayer offset={0} speed={1.5} factor={0.5}>
         <ContentSecond>
           <LayerTwo />
         </ContentSecond>
       </StyledLayer>
-      <StyledLayer offset={0} speed={1} factor={8}>
+      <StyledLayer offset={0} speed={1} factor={1}>
         <ContentThird>
           <Layout parallRef={parallRef}>
             <LayerThree parallRef={parallRef} />
           </Layout>
         </ContentThird>
+      </StyledLayer>
+      <StyledLayer offset={3} speed={1} factor={1}>
+        <h1>Offset 3</h1>
       </StyledLayer>
     </Parallax>
   );

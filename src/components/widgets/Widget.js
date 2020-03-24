@@ -19,6 +19,9 @@ const StyledHeading = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.xxl};
   font-weight: 100;
   margin-bottom: 80px;
+  background-color: ${({ theme }) => theme.textColors.primary};
+  opacity: 0.5;
+  padding: 0 20px;
 `;
 
 const Widget = ({

@@ -103,10 +103,10 @@ const Header = ({ parallRef }) => {
         <HeaderLink href='#products' onClick={() => scrollIt(0.6)}>
           Products
         </HeaderLink>
-        <HeaderLink href='#team' onClick={() => scrollIt(2)}>
+        <HeaderLink href='#team' onClick={() => scrollIt(1.15)}>
           Our team
         </HeaderLink>
-        <HeaderLink href='#contact' onClick={() => scrollIt(3)}>
+        <HeaderLink href='#contact' onClick={() => scrollIt(1.7)}>
           Get in touch
         </HeaderLink>
       </HeaderMenu>

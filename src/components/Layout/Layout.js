@@ -28,7 +28,7 @@ const Layout = ({ children, parallRef }) => {
       <Container>
         <Header parallRef={parallRef} />
         <Content>{children}</Content>
-        <FooterStyled />
+        <FooterStyled parallRef={parallRef} />
       </Container>
     </ThemeProvider>
   );

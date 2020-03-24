@@ -1,6 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Widget from '../widgets/Widget';
+import Member from './Member';
+
+const MembersContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+`;
 
 const OurTeam = () => {
   return (
@@ -8,20 +19,18 @@ const OurTeam = () => {
       title='Our Team'
       colStart={5}
       colEnd={-2}
-      rowStart={22}
+      rowStart={21}
       rowEnd={28}
       leftRad
     >
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores animi
-        earum optio. Quod fugiat, corporis eum maxime expedita, sequi
-        voluptatibus tenetur nulla quisquam reiciendis inventore aut,
-        perspiciatis vero tempore veniam voluptatum repudiandae ut id minus
-        nobis delectus! Corrupti excepturi a possimus aliquid perferendis
-        voluptas assumenda maxime similique exercitationem saepe voluptatem
-        nihil illo accusamus optio repudiandae reiciendis alias, perspiciatis
-        earum iure dicta ducimus. Nihil ipsam
-      </p>
+      <MembersContainer>
+        <Member posX={0} posY={0} username='July' />
+        <Member posX={0} posY={-320} username='Jim' />
+        <Member posX={-160} posY={0} username='Anna' />
+        <Member posX={-320} posY={0} username='Jerry' />
+        <Member posX={-160} posY={-160} username='Pete' />
+        <Member posX={-310} posY={-320} username='Ben' />
+      </MembersContainer>
     </Widget>
   );
 };

@@ -4,6 +4,7 @@ import { useSpring, animated, config } from 'react-spring';
 import Welcome from '../widgets/Welcome';
 import Products from '../widgets/Products';
 import OurTeam from '../widgets/OurTeam';
+import Contact from '../widgets/Contact';
 import Arrow from '../widgets/Arrow';
 
 const StyledContainer = styled.div`
@@ -28,7 +29,7 @@ const AccentBtn = styled(animated.button)`
 
 const TenYears = styled.div`
   grid-column: 2 / 3;
-  grid-row: 22 / 28;
+  grid-row: 21 / 28;
   font-size: ${({ theme }) => theme.fontSizes.xl};
   writing-mode: vertical-rl;
   text-orientation: sideways;
@@ -83,12 +84,18 @@ const LayerThree = props => {
         </AccentBtn>
         <Arrow arrowCol={4} arrowRowStart={8} arrowRowEnd={11} />
         <Products />
-        <Arrow arrowCol={7} arrowRowStart={18} arrowRowEnd={22} />
+        <Arrow arrowCol={7} arrowRowStart={18} arrowRowEnd={21} />
         <OurTeam />
         <TenYears>Ten Years On Market</TenYears>
+        <Arrow arrowCol={8} arrowRowStart={28} arrowRowEnd={31} />
+        <Contact />
       </StyledContainer>
     </div>
   );
 };
+
+// TODO: split this layer's widget into 4 parallax pages with offsets: 0, 1, 2, 3
+// use size tracker to calculate beginings and ends of all arrows
+// add props to arrow component to place it accordingly to coordinates
 
 export default LayerThree;

@@ -6,10 +6,11 @@ import Product from './Product';
 const ProdContainer = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
 `;
 
 const productsData = [
