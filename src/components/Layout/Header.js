@@ -100,7 +100,7 @@ const Header = ({ parallRef }) => {
         <HeaderLink href='#welcome' onClick={() => scrollIt(0)}>
           Welcome
         </HeaderLink>
-        <HeaderLink href='#products' onClick={() => scrollIt(1)}>
+        <HeaderLink href='#products' onClick={() => scrollIt(0.6)}>
           Products
         </HeaderLink>
         <HeaderLink href='#team' onClick={() => scrollIt(2)}>

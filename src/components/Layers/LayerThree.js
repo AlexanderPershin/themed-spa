@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import Welcome from '../widgets/Welcome';
+import Products from '../widgets/Products';
+import Arrow from '../widgets/Arrow';
 
 const StyledContainer = styled.div`
   display: grid;
@@ -65,6 +67,8 @@ const LayerThree = props => {
         >
           Free trial
         </AccentBtn>
+        <Arrow arrowCol={4} arrowRowStart={8} arrowRowEnd={11} />
+        <Products />
       </StyledContainer>
     </div>
   );

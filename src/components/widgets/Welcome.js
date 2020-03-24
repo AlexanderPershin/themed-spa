@@ -1,26 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import Widget from '../widgets/Widget';
 
-const StyledWelcome = styled.div`
-  grid-column: 2 / 9;
-  grid-row: 2 / 8;
-  border: 20px solid ${({ theme }) => theme.colors.primary};
-  border-bottom-right-radius: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const StyledHeading = styled.h1`
-  font-size: 75px;
-  font-weight: 100;
+const StyledPar = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes.xl};
+  font-weight: 300;
 `;
 
 const Welcome = () => {
   return (
-    <StyledWelcome>
-      <StyledHeading>Welcome</StyledHeading>
-    </StyledWelcome>
+    <Widget
+      title='Welcome!'
+      colStart={2}
+      colEnd={9}
+      rowStart={2}
+      rowEnd={8}
+      rightRad
+    >
+      <StyledPar>If you need [product], you came to the right place</StyledPar>
+    </Widget>
   );
 };
 

@@ -5,7 +5,8 @@ export default {
     accent: '#F9F871'
   },
   textColors: {
-    primary: '#ECECE0'
+    primary: '#ECECE0',
+    secondary: '#222222'
   },
   fonts: {
     primary: `'Roboto', sans-serif`
@@ -14,7 +15,8 @@ export default {
     sm: `18px`,
     md: `22px`,
     lg: `30px`,
-    xl: `45px`
+    xl: `45px`,
+    xxl: `75px`
   },
   shadows: ['0 0 10px rgba(0,0,0,0.5)', '0 3px 10px rgba(0,0,0,0.6)'],
   borderRadius: '7px'

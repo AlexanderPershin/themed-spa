@@ -44,7 +44,6 @@ const ContentThird = styled(StyledContent)`
 
 function App() {
   const parallRef = useRef(null);
-  console.log('App -> parallRef', parallRef);
 
   return (
     <Parallax pages={8} scrolling={true} horizontal={false} ref={parallRef}>
