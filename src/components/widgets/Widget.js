@@ -29,7 +29,7 @@ const Widget = ({
   rowStart,
   rowEnd,
   leftRad = false,
-  rightRad = true
+  rightRad = false
 }) => {
   return (
     <StyledContainer

@@ -3,6 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import Welcome from '../widgets/Welcome';
 import Products from '../widgets/Products';
+import OurTeam from '../widgets/OurTeam';
 import Arrow from '../widgets/Arrow';
 
 const StyledContainer = styled.div`
@@ -23,6 +24,19 @@ const AccentBtn = styled(animated.button)`
   color: ${({ theme }) => theme.colors.accent};
   outline: none;
   background-color: transparent;
+`;
+
+const TenYears = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 22 / 28;
+  font-size: ${({ theme }) => theme.fontSizes.xl};
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(-180deg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.accent};
 `;
 
 const LayerThree = props => {
@@ -69,6 +83,9 @@ const LayerThree = props => {
         </AccentBtn>
         <Arrow arrowCol={4} arrowRowStart={8} arrowRowEnd={11} />
         <Products />
+        <Arrow arrowCol={7} arrowRowStart={18} arrowRowEnd={22} />
+        <OurTeam />
+        <TenYears>Ten Years On Market</TenYears>
       </StyledContainer>
     </div>
   );

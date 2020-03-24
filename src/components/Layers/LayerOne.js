@@ -4,6 +4,7 @@ import officeOne from '../../img/office.jpg';
 import officeTwo from '../../img/office-2.jpg';
 import officeThree from '../../img/office-3.jpg';
 
+import vid3 from '../../img/vid3.mp4';
 import vid4 from '../../img/vid4.mp4';
 
 const StyledDiv = styled.div`
@@ -26,6 +27,9 @@ const SecondDiv = styled(StyledDiv)`
 const ThirdDiv = styled(StyledDiv)`
   background-image: url(${officeThree});
 `;
+const FourthDiv = styled(StyledDiv)`
+  background-image: url(${officeThree});
+`;
 
 const LayerOne = () => {
   return (
@@ -37,6 +41,11 @@ const LayerOne = () => {
         </video>
       </SecondDiv>
       <ThirdDiv />
+      <FourthDiv>
+        <video autoPlay muted loop id='myVideo'>
+          <source src={vid3} type='video/mp4' />
+        </video>
+      </FourthDiv>
     </div>
   );
 };
