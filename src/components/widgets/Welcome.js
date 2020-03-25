@@ -5,6 +5,10 @@ import Widget from '../widgets/Widget';
 const StyledPar = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: 300;
+  @media (max-width: 600px) {
+    margin-top: 150px;
+    font-size: ${({ theme }) => theme.fontSizes.lg};
+  }
 `;
 
 const Welcome = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { animated, config, useSpring } from 'react-spring';
+import { animated } from 'react-spring';
 import Widget from '../widgets/Widget';
 
 const EmailInput = styled.input`
@@ -62,7 +62,7 @@ const Contact = () => {
       <MsgArea
         name='msg'
         id='msg'
-        cols='30'
+        cols='20'
         rows='10'
         placeholder='Your message'
       ></MsgArea>

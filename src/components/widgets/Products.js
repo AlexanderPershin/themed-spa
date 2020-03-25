@@ -11,6 +11,10 @@ const ProdContainer = styled.div`
   grid-gap: 20px;
   justify-items: center;
   align-items: center;
+  @media (max-width: 600px) {
+    grid-gap: 10px;
+    transform: translateY(-50px);
+  }
 `;
 
 const productsData = [

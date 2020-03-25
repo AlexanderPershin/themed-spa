@@ -11,9 +11,18 @@ const AccentBtn = styled(animated.button)`
   font-family: ${({ theme }) => theme.fonts.primary};
   font-size: ${({ theme }) => theme.fontSizes.lg};
   font-weight: bold;
+  white-space: nowrap;
   color: ${({ theme }) => theme.colors.accent};
   outline: none;
   background-color: transparent;
+  @media (max-width: 880px) {
+    grid-column: 5 / 8;
+    grid-row: 7 / 8;
+  }
+  @media (max-width: 600px) {
+    grid-column: 4 / 9;
+    grid-row: 5 / 6;
+  }
 `;
 
 const AccentButton = () => {

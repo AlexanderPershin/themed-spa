@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import styled, { createGlobalStyle } from 'styled-components';
-import Layout from './components/Layout/Layout';
+// import Layout from './components/Layout/Layout';
 import LayerOne from './components/Layers/LayerOne';
 import LayerTwo from './components/Layers/LayerTwo';
-import LayerThree from './components/Layers/LayerThree';
+// import LayerThree from './components/Layers/LayerThree';
 import { ThemeProvider } from 'styled-components';
 import defaultTheme from './themes/defaultTheme';
 import darkTheme from './themes/darkTheme';
@@ -17,6 +17,7 @@ import OurTeam from './components/widgets/OurTeam';
 import Contact from './components/widgets/Contact';
 import Arrow from './components/widgets/Arrow';
 import AccentButton from './components/widgets/AccentButton';
+import TenYears from './components/widgets/TenYears';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -44,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
       -webkit-box-shadow: inset 0 0 6px ${({ theme }) => theme.shadowColor};
       background-color: ${({ theme }) => theme.colors.primary}
   }
+
+  ::selection { 
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.accent}; }
 `;
 
 const StyledLayer = styled(ParallaxLayer)`
@@ -68,9 +73,9 @@ const ContentSecond = styled(StyledContent)`
   /* background-color: rgba(0, 39, 105, 0.3); */
 `;
 
-const ContentThird = styled(StyledContent)`
-  /* overflow: hidden; */
-`;
+// const ContentThird = styled(StyledContent)`
+//   /* overflow: hidden; */
+// `;
 
 const PhaseThreeContainer = styled.div`
   display: grid;
@@ -80,8 +85,31 @@ const PhaseThreeContainer = styled.div`
   height: 100%;
 `;
 
-function App() {
+const useLocalTheme = (themeVar = 'light') => {
   const [themeStyle, setTheme] = useState('light');
+
+  useEffect(() => {
+    const prevTheme = localStorage.getItem('theme');
+    console.log('update');
+
+    if (prevTheme) {
+      setTheme(prevTheme);
+    } else {
+      localStorage.setItem('theme', themeVar);
+      setTheme(themeVar);
+    }
+  }, [themeVar]);
+
+  const handleChangeTheme = newTheme => {
+    localStorage.setItem('theme', newTheme);
+    setTheme(newTheme);
+  };
+
+  return [themeStyle, handleChangeTheme];
+};
+
+function App() {
+  const [themeStyle, setTheme] = useLocalTheme('light');
   const parallRef = useRef(null);
 
   return (
@@ -124,6 +152,7 @@ function App() {
           <StyledContent>
             <PhaseThreeContainer>
               <OurTeam />
+              <TenYears>Ten Years On Market</TenYears>
               <Arrow arrowCol={8} arrowRowStart={8} arrowRowEnd={12} />
             </PhaseThreeContainer>
           </StyledContent>

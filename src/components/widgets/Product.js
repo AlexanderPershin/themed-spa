@@ -15,6 +15,10 @@ const StyledProduct = styled(animated.div)`
   font-size: ${({ theme }) => theme.fontSizes.lg};
   color: ${({ theme }) => theme.textColors.primary};
   user-select: none;
+  @media (max-width: 600px) {
+    flex-basis: 150px;
+    height: 150px;
+  }
 `;
 
 const ProductInner = styled(animated.div)`
@@ -32,6 +36,9 @@ const ProductInner = styled(animated.div)`
   border-color: ${({ theme }) => theme.colors.secondary};
   border-width: 7px;
   border-style: dotted;
+  @media (max-width: 600px) {
+    flex-basis: 150px;
+  }
 `;
 
 const StyledText = styled(animated.div)`

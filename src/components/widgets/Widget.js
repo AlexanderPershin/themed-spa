@@ -13,6 +13,9 @@ const StyledContainer = styled.div`
   align-items: flex-start;
   padding: 50px;
   color: ${({ theme }) => theme.textColors.secondary};
+  @media (max-width: 880px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 const StyledHeading = styled.h1`

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import Switch from 'react-switch';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
@@ -14,6 +14,9 @@ const HeaderStyled = styled.header`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 10px;
   grid-template-rows: 1fr;
+  @media (max-width: 600px) {
+    grid-row: 1 / 3;
+  }
 `;
 
 const HeaderMenu = styled.div`
@@ -21,12 +24,14 @@ const HeaderMenu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   font-size: ${({ theme }) => theme.fontSizes.lg};
 `;
 
 const HeaderLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.textColors.primary};
+  white-space: nowrap;
   &:hover {
     text-decoration: underline;
   }
