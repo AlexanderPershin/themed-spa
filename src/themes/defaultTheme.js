@@ -1,4 +1,7 @@
+import constants from './constants';
+
 export default {
+  bodyBg: '#ffffff',
   colors: {
     primary: '#6818EB',
     secondary: '#1B81A1',
@@ -11,13 +14,7 @@ export default {
   fonts: {
     primary: `'Roboto', sans-serif`
   },
-  fontSizes: {
-    sm: `18px`,
-    md: `22px`,
-    lg: `30px`,
-    xl: `45px`,
-    xxl: `75px`
-  },
   shadows: ['0 0 10px rgba(0,0,0,0.5)', '0 3px 10px rgba(0,0,0,0.6)'],
-  borderRadius: '7px'
+  shadowColor: 'rgba(0,0,0,0.5)',
+  ...constants
 };

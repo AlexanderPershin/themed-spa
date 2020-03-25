@@ -29,8 +29,8 @@ const Products = () => {
       title='Our Products'
       colStart={2}
       colEnd={-2}
-      rowStart={11}
-      rowEnd={18}
+      rowStart={1}
+      rowEnd={8}
       leftRad
       rightRad
     >

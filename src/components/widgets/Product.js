@@ -58,7 +58,7 @@ const Product = ({ children }) => {
       style={{
         transform: y.interpolate(v => `translateY(${v}px`),
         boxShadow: sh.interpolate(
-          v => `0 ${v}px 10px ${v / 2}px rgba(0,0,0,0.5)`
+          v => `0 ${v}px 10px ${v / 2}px ${themeContext.shadowColor}`
         )
       }}
       onMouseEnter={() => set({ y: 0, sh: 10 })}

@@ -1,31 +1,72 @@
 import React from 'react';
 import styled from 'styled-components';
+import { animated, config, useSpring } from 'react-spring';
 import Widget from '../widgets/Widget';
 
+const EmailInput = styled.input`
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  color: ${({ theme }) => theme.textColors.primary};
+  background-color: transparent;
+  padding: ${({ theme }) => theme.fontSizes.sm};
+  border: none;
+  border-bottom: 5px solid ${({ theme }) => theme.colors.primary};
+  width: 100%;
+  margin-bottom: ${({ theme }) => theme.fontSizes.lg};
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+const MsgArea = styled.textarea`
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  color: ${({ theme }) => theme.textColors.primary};
+  background-color: transparent;
+  padding: ${({ theme }) => theme.fontSizes.sm};
+  border: none;
+  border-bottom: 5px solid ${({ theme }) => theme.colors.primary};
+  border-left: 5px solid ${({ theme }) => theme.colors.primary};
+  width: 100%;
+  margin-bottom: ${({ theme }) => theme.fontSizes.lg};
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+const SendBtn = styled(animated.button)`
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  color: ${({ theme }) => theme.colors.accent};
+  padding: 0 ${({ theme }) => theme.fontSizes.sm};
+  background-color: transparent;
+  border: 5px solid ${({ theme }) => theme.colors.accent};
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.colors.secondary};
+  }
+`;
+
 const Contact = () => {
+  const handleContact = () => {
+    alert('Sending message... Just kidding :)');
+  };
+
   return (
     <Widget
       title='Get In Touch'
       colStart={2}
       colEnd={-2}
-      rowStart={31}
-      rowEnd={37}
-      leftRad
-      rightRad
+      rowStart={1}
+      rowEnd={8}
     >
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum
-        aliquam pariatur ratione! Doloribus ex praesentium tenetur laborum
-        quasi, nemo in, molestias delectus labore impedit, et necessitatibus
-        quia deserunt? Quo, fuga dolores odit voluptatibus illo saepe voluptatem
-        impedit, quod iste quaerat rem ratione odio id velit aspernatur
-        laudantium ipsum veniam dignissimos dolore. Expedita optio explicabo
-        dicta nisi distinctio, totam exercitationem sed quam. Ab et repellat
-        reiciendis! Harum vitae eveniet eaque nihil quidem recusandae voluptate
-        labore! Dolore vitae officia nesciunt consequuntur nemo veritatis harum!
-        Modi, itaque aspernatur voluptate totam harum dolores est reiciendis
-        delectus! Itaque unde, assumenda vitae libero repellendus atque?
-      </p>
+      <EmailInput type='email' placeholder='myemail@gmail.com' />
+      <MsgArea
+        name='msg'
+        id='msg'
+        cols='30'
+        rows='10'
+        placeholder='Your message'
+      ></MsgArea>
+      <SendBtn onClick={handleContact}>Send</SendBtn>
     </Widget>
   );
 };

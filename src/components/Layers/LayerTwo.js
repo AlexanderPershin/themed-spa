@@ -32,7 +32,6 @@ const LayerTwo = () => {
 
   return (
     <div>
-      <h1>Layer Two [Gradient]</h1>
       <AnimatedDiv style={animProps} />
     </div>
   );

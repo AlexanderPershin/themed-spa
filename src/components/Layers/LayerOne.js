@@ -14,11 +14,12 @@ const StyledDiv = styled.div`
   min-height: 700px;
   &:not(:last-child) {
     /* Gap between divs */
-    margin-bottom: 450px;
+    margin-bottom: 1350px;
   }
 `;
 
 const FirstDiv = styled(StyledDiv)`
+  margin-top: 200px;
   background-image: url(${officeOne});
 `;
 const SecondDiv = styled(StyledDiv)`

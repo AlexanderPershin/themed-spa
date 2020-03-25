@@ -16,7 +16,7 @@ const ArrowConnect = styled.div`
     40% 70%,
     40% 0%
   );
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
 `;
 
 const ArrowTail = styled.div`

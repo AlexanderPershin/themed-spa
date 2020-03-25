@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import { animated, useSpring, config } from 'react-spring';
 import membersSprite from '../../img/users.png';
 
@@ -43,6 +43,8 @@ const StyledMember = styled(animated.div)`
 `;
 
 const Member = ({ posX = 0, posY = 0, username = 'Jim', children }) => {
+  const themeContext = useContext(ThemeContext);
+
   const [{ y, sh }, set] = useSpring(() => ({
     y: 10,
     sh: 0,
@@ -56,7 +58,7 @@ const Member = ({ posX = 0, posY = 0, username = 'Jim', children }) => {
       style={{
         transform: y.interpolate(v => `translateY(${v}px`),
         boxShadow: sh.interpolate(
-          v => `0 ${v}px 10px ${v / 2}px rgba(0,0,0,0.5)`
+          v => `0 ${v}px 10px ${v / 2}px ${themeContext.shadowColor}`
         ),
         color: sh.interpolate(v => `rgba(255,255,255,${v / 10})`)
       }}

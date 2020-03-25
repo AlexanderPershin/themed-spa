@@ -19,8 +19,8 @@ const OurTeam = () => {
       title='Our Team'
       colStart={5}
       colEnd={-2}
-      rowStart={21}
-      rowEnd={28}
+      rowStart={1}
+      rowEnd={8}
       leftRad
     >
       <MembersContainer>

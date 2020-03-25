@@ -13,8 +13,8 @@ const Welcome = () => {
       title='Welcome!'
       colStart={2}
       colEnd={9}
-      rowStart={2}
-      rowEnd={8}
+      rowStart={3}
+      rowEnd={9}
       rightRad
     >
       <StyledPar>If you need [product], you came to the right place</StyledPar>
