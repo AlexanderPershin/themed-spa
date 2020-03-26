@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, config } from 'react-spring';
 
 import cubes from '../../img/cubes.png';
 
@@ -38,12 +38,12 @@ const LayerTwo = () => {
   useEffect(() => {
     setTimeout(() => {
       setToggle(prev => !prev);
-    }, 3000);
+    }, 6000);
   }, [toggle]);
 
   const animProps = useSpring({
-    opacity: toggle ? 0.6 : 0.6,
-    config: { mass: 5, tension: 250, friction: 15 }
+    opacity: toggle ? 0.55 : 0.5,
+    config: config.molasses
   });
 
   return (
