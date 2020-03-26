@@ -49,6 +49,11 @@ const GlobalStyle = createGlobalStyle`
   ::selection { 
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.accent}; }
+
+  :root {
+    --color_1: transparent;
+    --color_2: transparent;
+  }
 `;
 
 const StyledLayer = styled(ParallaxLayer)`
@@ -90,7 +95,6 @@ const useLocalTheme = (themeVar = 'light') => {
 
   useEffect(() => {
     const prevTheme = localStorage.getItem('theme');
-    console.log('update');
 
     if (prevTheme) {
       setTheme(prevTheme);
@@ -111,6 +115,26 @@ const useLocalTheme = (themeVar = 'light') => {
 function App() {
   const [themeStyle, setTheme] = useLocalTheme('light');
   const parallRef = useRef(null);
+
+  useEffect(() => {
+    // Setup houdini custom properties :)
+
+    if (window.CSS.registerProperty) {
+      window.CSS.registerProperty({
+        name: '--color_1',
+        syntax: '<color>',
+        inherits: false,
+        initialValue: 'transparent'
+      });
+
+      window.CSS.registerProperty({
+        name: '--color_2',
+        syntax: '<color>',
+        inherits: false,
+        initialValue: 'transparent'
+      });
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={themeStyle === 'light' ? defaultTheme : darkTheme}>
