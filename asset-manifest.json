@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/themed-spa/static/js/main.93fda8f0.chunk.js",
+    "main.js.map": "/themed-spa/static/js/main.93fda8f0.chunk.js.map",
+    "runtime-main.js": "/themed-spa/static/js/runtime-main.d5fbd3af.js",
+    "runtime-main.js.map": "/themed-spa/static/js/runtime-main.d5fbd3af.js.map",
+    "static/js/2.7d13d3a1.chunk.js": "/themed-spa/static/js/2.7d13d3a1.chunk.js",
+    "static/js/2.7d13d3a1.chunk.js.map": "/themed-spa/static/js/2.7d13d3a1.chunk.js.map",
+    "index.html": "/themed-spa/index.html",
+    "precache-manifest.c7908709aa7ff34899badb4be1f5b2e3.js": "/themed-spa/precache-manifest.c7908709aa7ff34899badb4be1f5b2e3.js",
+    "service-worker.js": "/themed-spa/service-worker.js",
+    "static/js/2.7d13d3a1.chunk.js.LICENSE.txt": "/themed-spa/static/js/2.7d13d3a1.chunk.js.LICENSE.txt",
+    "static/media/office-2.jpg": "/themed-spa/static/media/office-2.e01940f8.jpg",
+    "static/media/office-3.jpg": "/themed-spa/static/media/office-3.569009e6.jpg",
+    "static/media/office.jpg": "/themed-spa/static/media/office.7dcf6a8c.jpg",
+    "static/media/users.png": "/themed-spa/static/media/users.e0916195.png",
+    "static/media/vid3.mp4": "/themed-spa/static/media/vid3.fb7113aa.mp4",
+    "static/media/vid4.mp4": "/themed-spa/static/media/vid4.27d3a93a.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5fbd3af.js",
+    "static/js/2.7d13d3a1.chunk.js",
+    "static/js/main.93fda8f0.chunk.js"
+  ]
+}
