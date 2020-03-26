@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ea587c3c848517ee6c4e6cb985917ac",
+    "revision": "40dc464a5b0fcc39284dac614b7672ad",
     "url": "/themed-spa/index.html"
   },
   {
-    "revision": "a8598fdd77aa57ec9fbd",
-    "url": "/themed-spa/static/js/2.7d13d3a1.chunk.js"
+    "revision": "bbb7b3a493f30042adc2",
+    "url": "/themed-spa/static/js/2.cf3dc5d6.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/themed-spa/static/js/2.7d13d3a1.chunk.js.LICENSE.txt"
+    "url": "/themed-spa/static/js/2.cf3dc5d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9ac3dddb7917e0d886dc",
-    "url": "/themed-spa/static/js/main.93fda8f0.chunk.js"
+    "revision": "e6447e54797e5e4554a5",
+    "url": "/themed-spa/static/js/main.885e494f.chunk.js"
   },
   {
     "revision": "bbb7929445471a15367e",
